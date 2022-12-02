@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>input text and show alert</title>
+      <style type="text/css" media="all">
+         button {
+            position: relative;
+            left: 180px;
+         }
+      </style>
+   </head>
+   <body>
+      <input type="number" placeholder="masukan bin"    id="input1" />
+      <input type="number" placeholder="masukan month"  id="input2" /><br>
+      <input type="number" placeholder="masukan tahun"  id="input3" /><br>
+      <input type="number" placeholder="masukan cvv"    id="input4" /><br>
+      <input type="number" placeholder="masukan jumlah" id="quanti" /><br>
+      <button id="show"> show</button>
+      <textarea id="show1"></textarea>
+      
+      <script type="text/javascript" charset="utf-8">
+         document.getElementById("show").onclick = function() {
+            var x =  document.getElementById("input1").value;
+            let x1 = document.getElementById("input2").value;
+            let x2 = document.getElementById("input3").value;
+            let x3 = document.getElementById("input4").value;
+            if(x2 == ""){
+            	let n = Math.floor(Math.random() * 12) + 1;
+            	n = String(n);
+            	let zero = "0";
+            	
+            	if (n != 10 && n != 11 && n != 12){
+            		let rn = `${zero}${n}`;
+            	    document.getElementById('input2').value = rn;
+            	}
+            	else{
+            		let rm = n;
+            		document.getElementById('input2').value = rm;
+            	}
+            }
+            else{
+            	document.getElementById('input2').value;
+            }
+            
+            let z = `${x}|${x1}|${x2}|${x3}`;
+            
+            let c = document.getElementById("quanti").value;
+            let b = 0;
+            while(b<c){
+                b+=1;
+                let m = Math.floor(Math.random() * 10000000) +100000;
+                document.getElementById("show1").innerHTML += `${z}|${m}<br>`;
+            }
+         }
+      </script>
+   </body>
+</html>

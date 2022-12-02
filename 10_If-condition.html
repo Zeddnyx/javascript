@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta content="text/html; charset=utf-8" />
+      <title>if else</title>
+      <style type="text/css" media="all">
+      .posisi {
+         position: absolute;
+         left: 140px;
+         right: 50px;
+         bottom: 50%;
+         font-size: 20px;
+      }
+      #input {
+         font-size: 24px;
+      }
+      </style>
+   </head>
+   <body>
+      
+      <div class="posisi">
+         <input id="input" placeholder="Username"><br><br>
+         <button id="submit">Submit</button>
+       </div>
+       
+      <script type="text/javascript" charset="utf-8">
+      document.getElementById('submit').onclick = function() {
+         var user = document.getElementById("input").value;
+         var username = "zedd";
+         var username1 = "Zedd";
+         
+         if (user == username) {
+            alert ("success")
+         } else if (user == username1) {
+            alert('success')
+         }
+         else {
+            alert ("wrong user/pw")
+         }
+      }
+         
+      </script>
+   </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+   <title>Dom css</title>
+   <style css>
+      body {
+         background-color: #ffd1f0;
+      }
+      button {
+         border-radius: 17%;
+         height: 40px;
+         width: 60px;
+      }
+      img {
+         height: 100px;
+         width: 100px;
+      }
+   </style>
+</head>
+   <body>
+      <h2 id="hello">hello world</h2>
+      <button id="red">red</button>
+      <button id="purple">purple</button>
+      
+      <h2 id="size">hello world</h2>
+      <button id="big">big</button>
+      <button id="little">little</button>
+      <button id="normal">normal</button>
+      
+      <br><br><img id="img" src="FB_IMG_1654407784723.jpg">
+      
+      <script type="text/javascript" charset="utf-8">
+    
+<!-- dom css change color text -->
+       document.getElementById("red").onclick = function () {
+          document.getElementById("hello").style.color = "red";
+       }
+       document.getElementById("purple").onclick = function () {
+          document.getElementById("hello").style.color = "purple";
+       }
+       
+<!-- dom css change text size  -->
+       document.getElementById("big").onclick = function () {
+          document.getElementById("size").style.fontSize = "50px";
+       }
+       document.getElementById("little").onclick = function () {
+          document.getElementById("size").style.fontSize = "15px";
+       }
+       document.getElementById("normal").onclick = function () {
+          document.getElementById("size").style.fontSize = "24px";
+       }
+       
+<!-- dom css clear image -->
+       document.getElementById("img").onclick = function () {
+          document.getElementById("img").style.display = "none" ;
+       }
+    </script>
+   </body>
+</html>
+
+<!-- style.display  adalah property -->

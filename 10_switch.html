@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <input type="text" id='value' placeholder='input your value'>
+    <button type="button" id='button'> submit</button>
+
+    <script>
+      let value = document.querySelector("#value").value;
+      let grade= value;
+      switch(grade) {
+        case 'A';
+           console.log('you did great!');
+           break;
+        case 'B';
+           console.log('you did good');
+           break;
+        case 'C';
+           console.log('you failed!!!');
+           break;
+        default:
+           alert(grade, 'is not a grade');
+      }
+    </script>
+  </body>
+</html>

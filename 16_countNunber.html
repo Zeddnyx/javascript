@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <style>
+      body {
+        background-color: grey;
+      }
+
+      #mycount {
+        display: block;
+        text-align: center;
+        font-size: 50px;
+      }
+
+      #mybutton {
+        font-size: 40px;
+        border-radius: 10px;
+        background-color: green;
+      }
+
+      #mybutton2 {
+        font-size: 40px;
+        border-radius: 10px;
+      }
+
+      #mybutton3 {
+        font-size: 40px;
+        border-radius: 10px;
+        background-color: red;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <label id="mycount">0</label>
+    <button type="button" id="mybutton">tambah</button>
+    <button type="button" id="mybutton2">reset</button>
+    <button type="button" id="mybutton3">kurang</button>
+
+
+    <script>
+      let count=0;
+      document.getElementById("mybutton").onclick = function(){
+          count+=1;
+          document.getElementById("mycount").innerHTML = count;
+      }
+
+      document.getElementById("mybutton2").onclick = function(){
+          count=0;
+          document.getElementById("mycount").innerHTML = count;
+      }
+
+      document.getElementById("mybutton3").onclick = function(){
+          count-=1;
+          document.getElementById("mycount").innerHTML = count;
+      }
+    </script>
+
+
+  </body>
+</html>

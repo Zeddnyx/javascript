@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>yo</title>
+  </head>
+  <body>
+    <label for="text" id="label">hello</label>
+    <input type="text" id=text>
+    <button type="button" id="button">buton</button>
+
+    <script>
+      let label;
+      document.getElementById("button").onclick = function() {
+          label = document.getElementById("text").value;
+          console.log("label");
+          document.getElementById("label").innerHTML = "uuuuuh" + label;            
+      }
+    </script>
+  </body>
+</html>

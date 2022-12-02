@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>convert temperature</title>
+	</head>
+	<body>
+		<label>Enter temperature</label><br>
+		<input type="number" id="numberTemp" /><br><br>
+		
+		<label>convert to</label><br>
+		<input type="radio" id="celsius" name="pilih"/> <!-- gunakan atribut nama supaya hanya bisa di pilih 1 pilihan -->
+		<label>Celsius</label>
+		<input type="radio" id="fahrenheit" name="pilih"/>
+		<label>Fahrenheit</label><br><br>
+		
+		<button type="button">submit</button>
+		<label for="button" id="submitBtn"></label>
+		
+		<script type="text/javascript" charset="utf-8">
+			document.getElementById("submit").onclick = function() {
+				let temp;
+				
+				if(document.getElementById("celsius").checked) {
+					temp = document.getElementById("numberTemp").value;
+					// convert ke number
+					temp = Number(temp);
+					temp = celsius(temp);
+					document.getElementById("submitBtn").innerHTML = temp + "°C";
+				}
+				
+				else if(document.getElementById("fahrenheit").checked) {
+					temp = document.getElementById("numberTemp").value;
+					// convert ke number
+					temp = Number(temp);
+					temp = fahrenheit(temp);
+					document.getElementById("submitBtn").innerHTML = temp + "°F";
+				}
+				
+				else{
+					document.getElementById("submitBtn").innerHTML = "input";
+				}
+			}
+			
+			// function untuk menghasilkan celsius
+			function celsius(temp){
+				return (temp - 32) * (5/9);
+			}
+			
+			function fahrenheit(temp){
+				return temp * 9 / 5 + 32;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>time out</title>
+	
+</head>
+<body>
+	<h1 id="text"></h1>
+	<h1 id="text1"></h1>
+	<script type="text/javascript" charset="utf-8">
+		// di sini buat dulu functionnya
+		function xxx() {
+			alert("yoo");
+		}
+		
+		// untuk set time nya seperti ini
+		setTimeout(xxx,3000); // 3000 = 3 sec
+
+		// menamplikan di html menggunakan timeout
+		function hateml() {
+			document.getElementById("text").innerHTML = "keep up to learing!";
+		}
+		setTimeout(hateml,1000)
+		
+		function pesan1() {
+			document.getElementById("text1").innerHTML = "better u burnout rn or burnout be dumb when u get older!!!,";
+		}
+		setTimeout(pesan1,2000);
+	</script>
+</body>
+</html>

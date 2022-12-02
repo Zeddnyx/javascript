@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <label for="checkbutton">agree</label>
+    <input type="checkbox" id='check'name="" value=""><br>
+    <button type="button" id='button'>submit</button>
+
+    <script>
+      document.getElementById('button').onclick = function() {
+            let box = document.getElementById('check')
+            if (box.checked == true) {
+               alert('thanks for agree the rules')
+            }
+            else{
+                    alert('you are not agree the rules')
+                  }
+      }
+    </script>
+  </body>
+</html>

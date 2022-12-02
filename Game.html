@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>game</title>
+		<style type="text/css" media="all">
+			body {
+				font-family: Sans-Serif;
+			}
+			.bold {
+				font-family: Sans-Serif;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>Tembak-Tembakan</h1>
+		<div class="bold">
+			<p>high score :</p>
+			<p>score :</p>
+		</div>
+		<img id="gambar"> 
+		
+		<script type="text/javascript" charset="utf-8">
+		
+		pewpew();
+		function pewpew() {
+			// pertama kita akan membuat random value number dan di kalikan 
+			var top  = Math.random() * 400;
+			var left = Math.random() * 400;
+			
+			document.getElementById("gambar").src = "gambar.png";
+			document.getElementById("gambar").style.width  = 60 + "px";
+			document.getElementById("gambar").style.height = 60 + "px";
+			document.getElementById("gambar").style.top    = top+ "px";
+			document.getElementById("gambar").style.left   =left+ "px";
+			document.getElementById("gambar").style.position = "relative";
+			
+			document.getElementById("gambar").style.display = "block";
+		}
+		// jika gambar di klik maka akan di ganti jadi centany
+		document.getElementById('gambar').onclick = function() {
+			document.getElementById("gambar").src  = "gambar2.png";
+			document.getElementById("gambar").style.width = 100 + "px";
+			document.getElementById("gambar").style.height = 100 + "px";
+			setTimeout(sembunyi,500);
+			setTimeout(sembunyi,600);
+		}
+		
+		function sembunyi() {
+			document.getElementById("gambar").style.display = "none";
+		}
+		</script>
+	</body>
+</html>

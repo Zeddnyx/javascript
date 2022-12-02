@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>while</title>
+   </head>
+   <body>
+      <p id="mbim"></p>
+      <script type="text/javascript" charset="utf-8">
+         var car = ["toyota","bmw","Mercedes Benz","honda"];
+         var saya = 0;
+         //  (<) = kurang dari
+         while (saya < car.length) {
+            console.log("saya punya mobil "+car[saya]);
+            saya++;
+         }
+          
+         // menampilkan list perulangan while di html
+         while (saya < car.length) {
+            document.getElementById("mbim").innerHTML += "saya punya mobil" + car[saya] + "<br>";
+            saya++;
+         }
+         
+      </script>
+   </body>
+</html>
